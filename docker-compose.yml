@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    container_name: eo-sar-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+      - ./api/src:/app/src
+      - ./worker:/app/worker
+    environment:
+      - IS_DOCKER=true
+      - DATA_DIR=/app/data
+    env_file:
+      - ./.env
+    restart: always
+    command: node src/index.js
+
+  web:
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile
+    container_name: geo-tiff-map-app-web
+    ports:
+      - "5174:80"
+    depends_on:
+      - api
+    restart: always

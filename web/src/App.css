@@ -1,0 +1,168 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.control-panel {
+  width: 350px;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.control-panel h2 {
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.file-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.file-input-group label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.file-info {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+}
+
+.aoi-info {
+  background-color: #e9ecef;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.aoi-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.reset-btn {
+  background-color: #ffc107;
+  color: #212529;
+  margin-top: 0.5rem;
+}
+
+.reset-btn:hover:not(:disabled) {
+  background-color: #e0a800;
+}
+
+.process-btn {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+}
+
+.process-btn:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.job-status-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.status-chip {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.output-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.output-toggle input {
+  transform: scale(1.2);
+}
+
+.map-container {
+  flex: 1;
+}
+
+.upload-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.upload-popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

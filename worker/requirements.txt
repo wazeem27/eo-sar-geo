@@ -1,0 +1,7 @@
+rasterio
+numpy
+scikit-image
+requests
+click
+pyproj
+shapely
